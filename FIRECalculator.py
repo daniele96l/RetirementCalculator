@@ -64,7 +64,7 @@ def Calculator(mortodifame,statistical_y,vector_years, vecotr_FireNumber):
             vecotr_FireNumber.append(fire_number)
 
            # print("Fire Number increased with inflation" + str(int(fire_number)))
-            #print("Portfolio " + str(int(portfolio_value)))
+            #print("Portfolio " + str(int(portfolio_value))) ok
 
             years = years + 1
             year += 1
