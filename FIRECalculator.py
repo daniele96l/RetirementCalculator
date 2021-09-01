@@ -31,8 +31,8 @@ def Calculator(mortodifame,statistical_y,vector_years, vecotr_FireNumber):
     paycheck_raise = 0.00 #you will not be junior for the rest of your life
     net_gain = 0
     saveMore = True #variable that we are going to use in the code , just to get out of the IF when we got into the FIRE numner
-    m_depo = 300  #yout montly deposit
-    m_ex = 1000 #your montly expenses will be uses to calculate your FIRE number + inflation
+    m_depo = 1000  #yout montly deposit
+    m_ex = 2000 #your montly expenses will be uses to calculate your FIRE number + inflation
     money_invested = 0
     starting_age = 25
     years = 25 #your age
@@ -64,7 +64,7 @@ def Calculator(mortodifame,statistical_y,vector_years, vecotr_FireNumber):
             vecotr_FireNumber.append(fire_number)
 
            # print("Fire Number increased with inflation" + str(int(fire_number)))
-            #print("Portfolio " + str(int(portfolio_value))) ok
+            #print("Portfolio " + str(int(portfolio_value))) okr
 
             years = years + 1
             year += 1
@@ -113,7 +113,7 @@ def Calculator(mortodifame,statistical_y,vector_years, vecotr_FireNumber):
 
 
 def readFile():
-    fileName = "sp500.txt"
+    fileName = "Global.txt"
     fileObj = open(fileName, "r")  # opens the file in read mode
     words = fileObj.read().splitlines()  # puts the file into an array
     fileObj.close()
@@ -142,7 +142,6 @@ def main():
     plt.title('FIRE calculator')
     ax = sns.lineplot(vector_years, statistical_y, label="NW", ci = 100)
     ax = sns.lineplot(vector_years, vecotr_FireNumber, label = "FIRE number growth with inflation")
-
 
 
     plt.show()
